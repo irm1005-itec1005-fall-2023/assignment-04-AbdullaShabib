@@ -1,43 +1,34 @@
-/* Assignment 04: Finishing a Todo List App
- *
- * 
- *
- */
+document.getElementById('add-btn').addEventListener('click', function() {
+    let curse = document.getElementById('todo-input').value;
+    if (curse) {
+        addItem(curse);
+        document.getElementById('todo-input').value = '';
+    }
+});
 
+function addItem(text) {
+    let list = document.getElementById('todo-items');
+    let item = document.createElement('li');
+    item.innerHTML = text;
 
-//
-// Variables
-//
+  let deleteButton = document.createElement('button');
+  deleteButton.innerHTML = 'Delete';
+  deleteButton.classList.add('delete-button'); 
+  deleteButton.addEventListener('click', function() {
+        list.removeChild(item);
+    });
+  
+  let completeButton = document.createElement('button');
+  completeButton.innerHTML = 'Complete';
+  completeButton.classList.add('complete-button');
+  completeButton.addEventListener('click', function() {
+      item.classList.add('complete');
+  });
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
-
-// DOM Elements
-let appContainer = document.getElementById(appID);
-
-//
-// Functions
-//
-
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
+      item.appendChild(deleteButton);
+      item.appendChild(completeButton);
+      list.appendChild(item);
   }
 
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
-}
-
-//
-// Inits & Event Listeners
-//
-inititialise();
+// https://www.youtube.com/watch?v=IKzlUvYSZO4 
+// I used this to help me add a class list for the buttons to include them in css to make it look appealing.
