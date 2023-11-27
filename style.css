@@ -1,56 +1,132 @@
-/*
- * CSS File for the solution
- * Assignment 03
- * You can modify these styles but you don't have to
- */
 
-/*
- VARIABLES
-*/
-:root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-cello);
-  --body-background-colour: var(--colour-peppermint);
-}
-
-/*
-  PAGE / BODY
-*/
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
-  min-height: 100vh;
-
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-image: url("Sukuna\ .webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
 
-/****** Screen reader text utility clsas *******/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+
+h1{
+font-family: Arial, sans-serif;
+font-size: 32px;
+justify-content: center;
+align-items: center;
+border-radius: 5px;
+color: white;
+background-image: linear-gradient(to right,mediumpurple,white );
+margin-bottom: 4px;
 }
+
+
+
+
+.Text-box {
+    
+    border-radius: 15px;
+    width: 350px;
+    padding: 2px;
+    max-height: 300px;
+    margin-top: 295px;
+   background-color: white;
+   background-image: linear-gradient(to left, white,mediumpurple);
+                                  
+   
+}
+
+.messages  {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+
+.Add-box {
+    display: flex;
+    margin-top: 10px;
+  
+}
+
+.Add-button input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+}
+
+.Add-button button {
+    padding: 10px;
+    border: none;
+    background-color:mediumpurple;
+    color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    text-decoration: none;
+    transition: 0.2s;
+    box-shadow: 0px 0px 5px mediumpurple, 0px 0px 25px white;
+}
+  .Add-button :hover{
+    background-color: white;
+    color: mediumpurple;
+    box-shadow: 0px 0px 5px mediumpurple, 0px 0px 25px white,0px 0px 50px mediumpurple, 0px 0px 100px white, 0px 0px 200px mediumpurple;
+  }
+
+.delete-button {
+    padding: 10px;
+    border: none;
+    background-color: mediumpurple;
+    color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3;
+    box-shadow: 0px 0px 5px mediumpurple, 0px 0px 25px white;
+}
+
+
+.delete-button:hover{
+  background-color: white;
+  color: mediumpurple;
+box-shadow: 0px 0px 5px mediumpurple, 0px 0px 25px white,0px 0px 50px mediumpurple, 0px 0px 100px white, 0px 0px 200px mediumpurple;
+}
+
+.complete-button {
+  padding: 10px;
+  border: none;
+  background-color: mediumpurple;
+  color: white;
+  border-radius: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.3;
+  box-shadow: 0px 0px 5px mediumpurple, 0px 0px 25px white;
+}
+
+
+.complete-button:hover{
+  background-color: white;
+  color: mediumpurple;
+box-shadow: 0px 0px 5px mediumpurple, 0px 0px 25px white,0px 0px 50px mediumpurple, 0px 0px 100px white, 0px 0px 200px mediumpurple;
+}
+
+.complete {
+    text-decoration: line-through;
+    color: black;
+  
+}
+
+/* this was used to add the linear Gradient effect 
+https://youtube.com/shorts/lz7B0wKXFxM?si=gqphn-CirZ0PLa-m 
+
+this was used to add the glowing effect to the buttons 
+https://youtube.com/shorts/FYIX7Kc5JRo?si=DrReqzpTRmsdat6G
+*/
